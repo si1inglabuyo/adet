@@ -1,0 +1,60 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center py-5" style="background: linear-gradient(135deg, #0a1428 0%, #1a2a4e 100%); color: white; padding: 60px 20px;">
+    <h1 class="display-3">🎮 League of Legends</h1>
+    <p class="lead">Explore the Champions of Runeterra</p>
+    <hr class="my-4 border-light" />
+    <p class="lead">Discover detailed information about your favorite League of Legends champions, their roles, abilities, and playstyles.</p>
+    <p class="lead">
+        <a href="@Url.Action("Index", "Blog")" class="btn btn-primary btn-lg">Browse Champions</a>
+    </p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">🗡️ Diverse Roles</h5>
+                    <p class="card-text">Choose from champions that fill multiple roles including Top, Jungle, Mid, ADC, and Support.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">⚡ Varied Playstyles</h5>
+                    <p class="card-text">Find champions that match your preferred playstyle, from tanky fighters to nimble assassins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">📊 Skill Levels</h5>
+                    <p class="card-text">Champions are rated from Easy to Hard to help you find the perfect fit for your skill level.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h4>About League of Legends</h4>
+                    <p>
+                        League of Legends is a team-based strategy game played between two teams of five powerful champions,
+                        each with a unique design and playstyle. Whether you're battling it out in the Rift or climbing the ranked ladder,
+                        understanding each champion is key to victory!
+                    </p>
+                    <p>
+                        <a href="@Url.Action("Index", "Blog")" class="btn btn-primary">Start Exploring →</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

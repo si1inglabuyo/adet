@@ -1,0 +1,46 @@
+# Build results
+/bin/
+/obj/
+/.vs/
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.user
+*.suo
+*.sln.docstates
+
+# NuGet
+.nuget/
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime
+appsettings.Development.json

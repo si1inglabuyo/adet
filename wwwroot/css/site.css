@@ -1,0 +1,139 @@
+/* League of Legends Champion Database - Custom Styles */
+
+:root {
+    --lol-dark: #0a1428;
+    --lol-light: #1a2a4e;
+    --lol-gold: #c89b3c;
+    --lol-primary: #0d6efd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background: linear-gradient(90deg, var(--lol-dark) 0%, var(--lol-light) 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+footer {
+    background-color: var(--lol-dark);
+    border-top: 3px solid var(--lol-gold);
+    padding: 2rem 0;
+    color: #fff;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.champion-card {
+    border-left: 4px solid var(--lol-primary);
+}
+
+.champion-image {
+    transition: transform 0.3s ease;
+}
+
+.champion-card:hover .champion-image {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: var(--lol-primary);
+    border-color: var(--lol-primary);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--lol-dark);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* Hero section headings - white text for visibility */
+.text-center h1, .text-center h2, .text-center h3 {
+    color: white !important;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure text is visible on dark backgrounds */
+.text-center p {
+    color: white !important;
+}
+
+.badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+}
+
+.badge.bg-primary {
+    background-color: var(--lol-primary) !important;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d !important;
+}
+
+.badge.bg-warning {
+    background-color: var(--lol-gold) !important;
+}
+
+.display-3, .display-4 {
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lead {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.text-center.py-5 {
+    border-radius: 0;
+    margin-bottom: 3rem;
+}
+
+/* Ensure hero heading is visible: force white, bold, full opacity */
+.text-center.py-5 .display-3,
+.text-center.py-5 h1.display-3,
+.text-center.py-5 h1 {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    font-size: 3.5rem !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.6) !important;
+    opacity: 1 !important;
+}

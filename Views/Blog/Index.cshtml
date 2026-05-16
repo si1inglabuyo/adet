@@ -26,24 +26,14 @@
             {
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 shadow-sm champion-card">
-                        <div class="position-relative">
-                            <img src="@champion.ImageUrl" class="card-img-top champion-image" alt="@champion.Title" style="height: 300px; object-fit: cover;">
-                            <div class="position-absolute top-0 end-0 m-2">
-                                <span class="badge bg-warning text-dark">@champion.Difficulty</span>
-                            </div>
-                        </div>
                         <div class="card-body">
                             <h5 class="card-title">
                                 <a href="@Url.Action("Details", "Blog", new { id = champion.Id })" class="text-decoration-none">
                                     ⚔️ @champion.Title
                                 </a>
                             </h5>
-                            <div class="mb-3">
-                                <div class="badge bg-primary me-2">@champion.Role</div>
-                                <div class="badge bg-secondary me-2">@champion.Type</div>
-                            </div>
                             <p class="card-text">
-                                <strong>Class:</strong> @champion.Author
+                                <strong>Author:</strong> @champion.Author
                             </p>
                             <p class="card-text text-muted">
                                 @(champion.Content.Length > 120 ? champion.Content.Substring(0, 120) + "..." : champion.Content)
@@ -51,7 +41,7 @@
                         </div>
                         <div class="card-footer bg-white border-top-0">
                             <a href="@Url.Action("Details", "Blog", new { id = champion.Id })" class="btn btn-sm btn-primary">
-                                View Champion →
+                                Read →
                             </a>
                         </div>
                     </div>

@@ -12,84 +12,52 @@ public class BlogController : Controller
         _logger = logger;
     }
 
-    // League of Legends Champions Database
     private static readonly List<Post> MockChampions = new()
     {
-        new Post 
-        { 
-            Id = 1, 
-            Title = "Ahri", 
-            Role = "Mid",
-            Author = "Mage/Assassin",
-            Difficulty = "Medium",
-            Type = "Mage",
-            ImageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
-            Content = "Ahri is a nine-tailed fox mage who prowls Runeterra's mystical heart seeking the magic to understand her prey—and herself. A trickster by nature, she exels at seduction and deception, using her supernatural charm to beguile her targets before striking with swift magical force. In the League of Legends, she is known for her mobility, crowd control, and burst damage potential.", 
-            CreatedAt = DateTime.UtcNow.AddDays(-7) 
+        new Post
+        {
+            Id = 1,
+            Title = "Ahri — The Nine-Tailed Fox",
+            Author = "Revi Ocasion",
+            Content = "Ahri is a mobile mage assassin who uses charm and burst magic to pick off targets. A versatile mid-laner, she excels at mobility and outplay potential, making her a popular champion for players who enjoy high-skill spell combos."
         },
-        new Post 
-        { 
-            Id = 2, 
-            Title = "Garen",
-            Role = "Top",
-            Author = "Tank/Fighter",
-            Difficulty = "Easy",
-            Type = "Fighter",
-            ImageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg",
-            Content = "Garen spins to win! This warrior of Demacia is known for his powerful sword strikes and Judgment ability. Garen excels in the top lane with his tankiness and sustained damage. He's an excellent choice for beginners due to his straightforward playstyle. His ultimate ability, Demacian Justice, delivers massive true damage to a single enemy.", 
-            CreatedAt = DateTime.UtcNow.AddDays(-5) 
+        new Post
+        {
+            Id = 2,
+            Title = "Garen — Might of Demacia",
+            Author = "Seth Evardo",
+            Content = "Garen is a durable top-lane juggernaut who trades simply and effectively. With strong sustain and a powerful execute ultimate, he represents the classic beginner-friendly champion that punishes mistakes and dominates extended trades."
         },
-        new Post 
-        { 
-            Id = 3, 
-            Title = "Lux",
-            Role = "Support/Mid",
-            Author = "Mage/Support",
-            Difficulty = "Easy",
-            ImageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg",
-            Type = "Mage",
-            Content = "Lux, the Lady of Luminosity, is a young mage from Demacia with the rare gift of magical affinity. Armed with her wand and protective light, she uses her magic to protect allies and devastate enemies. Her signature Final Spark ability creates a powerful laser that can eliminate targets from a distance. Perfect for players who want to control teamfights.",
-            CreatedAt = DateTime.UtcNow.AddDays(-3) 
+        new Post
+        {
+            Id = 3,
+            Title = "Lux — Lightbringer of Demacia",
+            Author = "Althea Gatchalian",
+            Content = "Lux is a control mage with long-range poke and a game-changing ultimate. She thrives in both mid and support roles, bringing shields and crowd-control tools that enable her team to win fights from range."
         },
-        new Post 
-        { 
-            Id = 4, 
-            Title = "Yasuo",
-            Role = "Mid/Top",
-            Author = "Assassin/Fighter",
-            Difficulty = "Hard",
-            ImageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg",
-            Type = "Swordsman",
-            Content = "Yasuo, the Unforgiven, is a high-skill-cap champion who wields a katana with deadly precision. His Wind Wall blocks incoming projectiles, and his Teleport/Dash combo allows him to engage and disengage fights rapidly. Steel Tempest can be chained for massive area damage. Mastering Yasuo requires significant practice but rewards players with flashy, exciting plays.",
-            CreatedAt = DateTime.UtcNow.AddDays(-1) 
+        new Post
+        {
+            Id = 4,
+            Title = "Yasuo — The Unforgiven",
+            Author = "Liezel Tamparong",
+            Content = "Yasuo is a high-skill champion focused on mobility and outplay mechanics. His kit rewards precise timing and positioning, allowing skilled players to carry games through mechanical prowess and smart map play."
         },
-        new Post 
-        { 
-            Id = 5, 
-            Title = "Thresh",
-            Role = "Support",
-            Author = "Support/Tank",
-            Difficulty = "Hard",
-            ImageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg",
-            Type = "Support",
-            Content = "Thresh is the Chain Warden, a ghostly jailer who binds enemies with his chains. His ability to hook enemies with Death Sentence makes him one of the most impactful support champions in the game. With high skill expression and crowd control, Thresh can turn teamfights around single-handedly. His Dark Passage lantern also provides shields and mobility for teammates.",
-            CreatedAt = DateTime.UtcNow.AddDays(-2) 
+        new Post
+        {
+            Id = 5,
+            Title = "Thresh — The Chain Warden",
+            Author = "Raphael Latoy",
+            Content = "Thresh is a playmaking support who hooks and repositions enemies while protecting allies with his lantern. His skill ceiling is high, offering massive reward to players who land precise hooks and flay timings."
         },
-        new Post 
-        { 
-            Id = 6, 
-            Title = "Ashe",
-            Role = "ADC",
-            Author = "Marksman",
-            Difficulty = "Medium",
-            Type = "Marksman",
-            ImageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
-            Content = "Ashe is a master archer and the Frost Archer of Freljord. She deals consistent physical damage from a distance and has exceptional utility with her Enchanted Crystal Arrow ultimate. Her Hawkshot ability reveals enemy positions, making her a great choice for controlling map vision. Perfect for players who want to deal sustained damage while staying safe.",
-            CreatedAt = DateTime.UtcNow.AddDays(-4) 
+        new Post
+        {
+            Id = 6,
+            Title = "Ashe — The Frost Archer",
+            Author = "Den Mateo",
+            Content = "Ashe is a utility marksman who shapes the map with slows and global crowd control. Her ultimate can initiate fights or catch out-of-position enemies, making her a strategic pick for coordinated play."
         }
     };
 
-    // Index action - displays list of all League of Legends champions
     public IActionResult Index()
     {
         try
@@ -104,7 +72,6 @@ public class BlogController : Controller
         }
     }
 
-    // Details action - displays details for a single champion
     public IActionResult Details(int id)
     {
         try
